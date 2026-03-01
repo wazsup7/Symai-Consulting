@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; }
-        /* High-visibility focus state */
-        :focus-visible { outline: 3px solid #0d9488; outline-offset: 4px; }
+        /* High-visibility focus state for accessibility */
+        :focus-visible { outline: 3px solid #0f766e; outline-offset: 4px; }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -34,7 +34,7 @@
         <section class="bg-gray-50 p-10 border border-gray-100 shadow-sm" aria-labelledby="signup-heading">
             <h2 id="signup-heading" class="font-bold mb-6 text-lg">Be the first to know when new content is published.</h2>
             
-            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3">
+            <form action="https://formspree.io/f/YOUR_ID" method="POST" class="flex flex-col sm:flex-row gap-3">
                 <label for="subscriber-email" class="sr-only">Enter your email address to get notified</label>
                 <input 
                     type="email" 
@@ -44,4 +44,21 @@
                     placeholder="Enter your email address" 
                     class="flex-1 p-4 border border-gray-200 text-sm focus:outline-none focus:border-teal-700 focus:ring-1 focus:ring-teal-700"
                 >
-                <button type="submit" class="bg-red-700 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-red-
+                <button type="submit" class="bg-red-700 text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-red-800 transition shadow-sm">
+                    Notify Me
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="py-16 px-6 text-center border-t border-gray-50 mt-20">
+        <div class="flex justify-center space-x-6 text-xs font-bold uppercase tracking-widest mb-6">
+            <a href="https://www.linkedin.com/in/supriyamathur" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-gray-400 hover:text-purple-700 transition">LinkedIn</a>
+            <a href="https://x.com/supriya26" target="_blank" rel="noopener noreferrer" aria-label="X Profile" class="text-gray-400 hover:text-purple-700 transition">X</a>
+            <a href="https://instagram.com/symaispeaks" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="text-gray-400 hover:text-purple-700 transition">Instagram</a>
+        </div>
+        <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-2">
+            &copy; 2026 Symai Consulting. All rights reserved.
+        </p>
+        <p class="text-[10px] text-gray-300 uppercase tracking-widest">
+            <a href="mailto:sup
