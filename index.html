@@ -8,152 +8,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; }
-        .accent-border { border-color: #e5e7eb; }
-        .hover-blue:hover { color: #2563eb; }
+        /* Focus state for accessibility */
+        :focus-visible { outline: 3px solid #0d9488; outline-offset: 4px; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0d9488; color: white; padding: 8px; z-index: 100; transition: top 0.3s; }
+        .skip-link:focus { top: 0; }
     </style>
 </head>
 <body>
 
-    <nav class="border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter uppercase flex items-center">
-                Symai<span class="text-blue-600">.</span>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur-md z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center" aria-label="Main Navigation">
+            <div class="text-2xl font-bold tracking-tighter uppercase">
+                <a href="index.html" aria-label="Symai Consulting Home">Symai<span class="text-teal-700" aria-hidden="true">.</span></a>
             </div>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
-                <a href="#about" class="hover-blue transition">About</a>
-                <a href="#services" class="hover-blue transition">Services</a>
-                <a href="insights.html" class="hover-blue transition">Insights</a>
-                <div class="flex space-x-4 border-l pl-8 accent-border">
-                    <a href="#" class="text-gray-400 hover:text-black">LI</a>
-                    <a href="#" class="text-gray-400 hover:text-black">X</a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#about" class="hover:text-teal-700 transition">About</a>
+                <a href="#services" class="hover:text-teal-700 transition">Services</a>
+                <a href="insights.html" class="hover:text-teal-700 transition">Insights</a>
+                
+                <div class="flex space-x-4 border-l pl-8 border-gray-200">
+                    <a href="https://www.linkedin.com/in/supriyamathur" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn profile" class="text-gray-400 hover:text-purple-700 transition">LI</a>
+                    <a href="https://x.com/supriya26" target="_blank" rel="noopener noreferrer" aria-label="Visit our X profile" class="text-gray-400 hover:text-purple-700 transition">X</a>
                 </div>
             </div>
-            <a href="#contact" class="bg-black text-white px-5 py-2 text-xs font-bold uppercase hover:bg-blue-600 transition">Book an Intro Call</a>
-        </div>
-    </nav>
 
-    <section class="relative min-h-[80vh] flex items-center px-6 pt-20 pb-32">
-        <div class="max-w-7xl mx-auto w-full">
-            <div class="max-w-4xl space-y-8">
-                <h1 class="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
-                    Strategic communications and investor relations for <span class="text-blue-600">life sciences.</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl">
-                    Symai Consulting helps founders and leadership teams sharpen their story, engage investors, and communicate complex science with clarity and confidence.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#contact" class="bg-black text-white px-10 py-5 font-bold uppercase text-sm tracking-widest text-center hover:bg-blue-600 transition">Book an Intro Call</a>
-                    <a href="#services" class="border border-gray-200 px-10 py-5 font-bold uppercase text-sm tracking-widest text-center hover:bg-gray-50 transition">View Our Services</a>
+            <a href="https://calendly.com/supriya-symaiconsulting" target="_blank" rel="noopener noreferrer" class="bg-red-700 text-white px-5 py-2 text-xs font-bold uppercase hover:bg-red-800 transition shadow-sm">
+                Book an Intro Call
+            </a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="relative min-h-[80vh] flex items-center px-6 pt-20 pb-32" aria-labelledby="hero-heading">
+            <div class="max-w-7xl mx-auto w-full">
+                <div class="max-w-4xl space-y-8">
+                    <h1 id="hero-heading" class="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight">
+                        Strategic communications and investor relations for <span class="text-purple-700">life sciences.</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-500 leading-relaxed max-w-2xl">
+                        Symai Consulting helps founders and leadership teams sharpen their story, engage investors, and communicate complex science with clarity and confidence.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="https://calendly.com/supriya-symaiconsulting" target="_blank" rel="noopener noreferrer" class="bg-red-700 text-white px-10 py-5 font-bold uppercase text-sm tracking-widest text-center hover:bg-red-800 transition shadow-md">
+                            Book an Intro Call
+                        </a>
+                        <a href="#services" class="border border-gray-200 px-10 py-5 font-bold uppercase text-sm tracking-widest text-center hover:bg-gray-50 transition">
+                            View Our Services
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="border-y border-gray-100 bg-gray-50/50 py-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                <div class="max-w-sm">
+        <section class="border-y border-gray-100 bg-gray-50/50 py-10" aria-label="Sectors of expertise">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
                     <p class="text-sm font-semibold leading-tight">20+ years in strategic communications and investor relations.</p>
+                    <ul class="flex flex-wrap gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400" role="list">
+                        <li>Life Sciences</li>
+                        <li>Biotech</li>
+                        <li>Pharma</li>
+                        <li>Medtech</li>
+                        <li>Diagnostics</li>
+                        <li>TechBio</li>
+                    </ul>
                 </div>
-                <div class="flex flex-wrap gap-x-8 gap-y-4 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
-                    <span>Life Sciences</span>
-                    <span>Biotech</span>
-                    <span>Pharma</span>
-                    <span>Medtech</span>
-                    <span>Diagnostics</span>
-                    <span>TechBio</span>
+            </div>
+        </section>
+
+        <section id="services" class="py-24 max-w-7xl mx-auto px-6" aria-labelledby="services-heading">
+            <div class="mb-16">
+                <h2 id="services-heading" class="text-sm font-bold uppercase tracking-[0.4em] text-purple-700 mb-4">What We Do</h2>
+                <p class="text-3xl font-bold max-w-2xl">Specialist communications support tailored to the needs of science-led and healthcare organisations.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 border border-gray-100">
+                <article class="bg-white p-10 hover:bg-teal-50/30 transition group border-t-2 border-transparent hover:border-teal-700">
+                    <h3 class="text-xl font-bold mb-4">Strategic Communications & Narrative Development</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Turning complex science and business strategy into clear, compelling stories. We help organisations define and own their narrative.</p>
+                </article>
+                <article class="bg-white p-10 hover:bg-teal-50/30 transition group border-t-2 border-transparent hover:border-teal-700">
+                    <h3 class="text-xl font-bold mb-4">Investor Relations & Targeting</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Building investor confidence with communications that go beyond the numbers—from crafting equity stories to managing engagement.</p>
+                </article>
+                <article class="bg-white p-10 hover:bg-teal-50/30 transition group border-t-2 border-transparent hover:border-teal-700">
+                    <h3 class="text-xl font-bold mb-4">Content Creation & Thought Leadership</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">High-impact content including press releases, executive announcements, op-eds, and LinkedIn strategy.</p>
+                </article>
+                </div>
+        </section>
+
+        <section id="about" class="py-24 bg-gray-50 border-y border-gray-100" aria-labelledby="about-heading">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-start">
+                    <div class="space-y-8">
+                        <h2 id="about-heading" class="text-sm font-bold uppercase tracking-[0.4em] text-purple-700">About Symai Consulting</h2>
+                        <p class="text-2xl font-bold leading-snug">Senior-level expertise without the overhead of a large agency.</p>
+                    </div>
+                    <div class="space-y-6 text-gray-600 leading-relaxed">
+                        <p>Symai Consulting is a specialist communications consultancy working with life sciences, biotech, pharma, medtech, diagnostics, and techbio organisations at critical moments of growth, transition, and visibility.</p>
+                        <p>With over 20 years of experience, we work with founders, executive teams, and boards to build communications that are credible, consistent, and built for the long term.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <section id="services" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="mb-16">
-            <h2 class="text-sm font-bold uppercase tracking-[0.4em] text-blue-600 mb-4">What We Do</h2>
-            <p class="text-3xl font-bold max-w-2xl">Specialist communications support tailored to the needs of science-led and healthcare organisations.</p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 border border-gray-100">
-            <div class="bg-white p-10 hover:bg-gray-50 transition group">
-                <h3 class="text-xl font-bold mb-4">Strategic Communications & Narrative Development</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Turning complex science and business strategy into clear, compelling stories. We help organisations define and own their narrative so every audience understands why they matter.</p>
-            </div>
-            <div class="bg-white p-10 hover:bg-gray-50 transition group">
-                <h3 class="text-xl font-bold mb-4">Investor Relations & Targeting</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Building investor confidence with communications that go beyond the numbers—from crafting equity stories to managing roadshows and results materials.</p>
-            </div>
-            <div class="bg-white p-10 hover:bg-gray-50 transition group">
-                <h3 class="text-xl font-bold mb-4">Content Creation & Thought Leadership</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">High-impact content including press releases, executive announcements, op-eds, and LinkedIn strategy to build credibility between milestones.</p>
-            </div>
-            <div class="bg-white p-10 hover:bg-gray-50 transition group">
-                <h3 class="text-xl font-bold mb-4">Media Relations</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Strategic media engagement that puts your story in front of the right journalists. Press office management and relationship building that supports business objectives.</p>
-            </div>
-            <div class="bg-white p-10 hover:bg-gray-50 transition group">
-                <h3 class="text-xl font-bold mb-4">Crisis Communications & Issues Management</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Rapid-response support to manage difficult situations, protect stakeholder trust, and emerge with credibility intact when reputations are at risk.</p>
-            </div>
-            <div class="bg-white p-10 hover:bg-gray-50 transition group">
-                <h3 class="text-xl font-bold mb-4">Media Training & Executive Coaching</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Preparing leadership teams to deliver with authority. Broadcast interview training, presentation coaching, and message development.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 bg-gray-50 border-y border-gray-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-start">
+        <section id="contact" class="py-24 max-w-7xl mx-auto px-6" aria-labelledby="contact-heading">
+            <div class="grid md:grid-cols-2 gap-16">
                 <div>
-                    <h2 class="text-sm font-bold uppercase tracking-[0.4em] text-blue-600 mb-8">About Symai Consulting</h2>
-                    <p class="text-2xl font-bold leading-snug">Senior-level expertise without the overhead of a large agency.</p>
+                    <h2 id="contact-heading" class="text-sm font-bold uppercase tracking-[0.4em] text-purple-700 mb-8">Get In Touch</h2>
+                    <p class="text-xl mb-8">Whether you are preparing for a fundraise or sharpening your strategy, Symai Consulting is here to help.</p>
+                    <address class="not-italic space-y-4 text-sm font-bold uppercase tracking-widest">
+                        <p>Email: <a href="mailto:hello@symai.com" class="text-teal-700 underline hover:text-red-700 transition">hello@symai.com</a></p>
+                        <p>Location: London, United Kingdom</p>
+                    </address>
                 </div>
-                <div class="space-y-6 text-gray-600 leading-relaxed">
-                    <p>Symai Consulting is a specialist communications consultancy working with life sciences, biotech, pharma, medtech, diagnostics, and techbio organisations at critical moments of growth, transition, and visibility.</p>
-                    <p>With over 20 years of experience across strategic communications, investor relations, and corporate affairs, the practice brings direct, focused support from an experienced practitioner who understands the science as well as the story.</p>
-                    <p>We work with founders, executive teams, and boards to build communications that are credible, consistent, and built for the long term.</p>
+                
+                <div class="bg-white border border-gray-100 p-8 shadow-sm">
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="name" class="sr-only">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Name" class="w-full p-4 border border-gray-200 text-sm focus:border-teal-700 focus:ring-1 focus:ring-teal-700">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Email Address" class="w-full p-4 border border-gray-200 text-sm focus:border-teal-700 focus:ring-1 focus:ring-teal-700">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">How can we help?</label>
+                            <textarea id="message" name="message" rows="4" placeholder="How can we help?" class="w-full p-4 border border-gray-200 text-sm focus:border-teal-700 focus:ring-1 focus:ring-teal-700"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-teal-700 text-white font-bold uppercase py-4 text-xs tracking-widest hover:bg-teal-800 transition">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16">
-            <div>
-                <h2 class="text-sm font-bold uppercase tracking-[0.4em] text-blue-600 mb-8">Get In Touch</h2>
-                <p class="text-xl mb-8">Whether you are preparing for a fundraise, managing a critical announcement, or simply looking to sharpen your communications strategy, Symai Consulting is here to help.</p>
-                <div class="space-y-4 text-sm font-bold uppercase tracking-widest">
-                    <p>Email: <a href="mailto:hello@symai.com" class="text-blue-600 underline">hello@symai.com</a></p>
-                    <p>Location: London, United Kingdom</p>
-                </div>
-            </div>
-            <div class="bg-white border border-gray-100 p-8 shadow-sm">
-                <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full p-4 border border-gray-200 text-sm focus:outline-none focus:border-blue-600">
-                    <input type="text" placeholder="Company" class="w-full p-4 border border-gray-200 text-sm focus:outline-none focus:border-blue-600">
-                    <input type="email" placeholder="Email Address" class="w-full p-4 border border-gray-200 text-sm focus:outline-none focus:border-blue-600">
-                    <textarea placeholder="How can we help?" rows="4" class="w-full p-4 border border-gray-200 text-sm focus:outline-none focus:border-blue-600"></textarea>
-                    <button class="w-full bg-black text-white font-bold uppercase py-4 text-xs tracking-widest hover:bg-blue-600 transition">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="border-t border-gray-100 py-16 px-6">
+    <footer class="border-t border-gray-100 py-16 px-6 bg-white">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="max-w-md">
-                <div class="text-2xl font-bold tracking-tighter uppercase mb-4">Symai<span class="text-blue-600">.</span></div>
-                <p class="text-[10px] text-gray-400 uppercase tracking-widest leading-loose">
-                    &copy; 2026 Symai Consulting. All rights reserved. Strategic communications and investor relations for life sciences, biotech, pharma, medtech, diagnostics, and techbio.
-                </p>
-            </div>
-            <div class="flex space-x-6 text-xs font-bold uppercase tracking-widest">
-                <a href="#" class="hover-blue">LinkedIn</a>
-                <a href="#" class="hover-blue">X / Twitter</a>
-                <a href="#" class="hover-blue">Instagram</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                <div class="text-2xl font-bold tracking-tighter uppercase mb-4">Symai<span class="text-teal-700">.</span></div>
+                <p class="text-[10px] text-gray-400 uppercase tracking
